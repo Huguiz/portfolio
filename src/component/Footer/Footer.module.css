@@ -1,0 +1,10 @@
+.article {
+    display: flex;
+    justify-content:space-between;
+    padding: 1rem;
+}
+
+.article p {
+    color: var(--secondTxtcolor);
+    font-weight: 400;
+}

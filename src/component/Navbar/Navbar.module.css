@@ -1,0 +1,49 @@
+.article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1rem;
+}
+
+.article img {
+    display: block;
+    cursor: pointer;
+}
+
+.link {
+    display: flex;
+    gap: 2rem;
+    letter-spacing: 0.12rem;
+}
+
+.link a {
+    color: var(--secondTxtcolor);
+    transition: 0.3s;
+}
+
+.link a:hover {
+    color: rgb(90, 90, 90);
+}
+
+.link a.active {
+    color: var(--mainTxtColor);
+    transform: scale(1.1);
+}
+
+.github {
+    height: 32px;
+    border-radius: 0.5rem;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 0.5px solid transparent;
+    transition: 0.2s;
+}
+
+.github:hover{
+    background-color: rgb(45, 45, 45);
+    border-color: rgb(55, 55, 55);
+}
+
+.github img {
+    height: 100%;
+}

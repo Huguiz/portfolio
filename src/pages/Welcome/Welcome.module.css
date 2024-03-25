@@ -1,0 +1,134 @@
+.presentation, .last_project, .skills, .hobbies {
+    padding: 8rem 1rem;
+}
+
+.presentation_split {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.presentation_split h1 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.presentation_text {
+    margin: 4rem 0 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: var(--secondtTxtColor);
+}
+
+.presentation_text p {
+    color: var(--secondtTxtColor);
+}
+
+.presentation_split img {
+    max-width: 360px;
+}
+
+.presentation_split a:last-child {
+    margin-left: 2rem;
+    font-size: 0.85rem;
+    text-decoration: underline;
+}
+
+.skill_bar {
+    max-width: none;
+    background-color: cornflowerblue;
+    padding: 0.8rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.skill_bar ul {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.skill_bar a {
+    text-decoration: underline;
+}
+
+.projects {
+    padding: 2rem 0;
+}
+
+.last_project > a {
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+}
+
+.project_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project {
+    margin: 4rem 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.project.reverse {
+    flex-direction: row-reverse;
+}
+
+.project > div {
+    flex: 1;
+}
+
+.project_img img {
+    width: 100%;
+    display: block;
+    border-radius: 0.75rem;
+}
+
+.project i {
+    font-weight: 300;
+}
+
+.description p {
+    margin-top: 1.5rem;
+    text-align: justify;
+    color: var(--secondtTxtColor);
+}
+
+.project a {
+    align-self: flex-end;
+    text-decoration: underline;
+    color: var(--secondtTxtColor);
+    font-style: italic;
+}
+
+.skills, .hobbies {
+    padding-top: 0rem;
+}
+
+.skills > p, .hobbies > p {
+    color: var(--secondtTxtColor);
+    padding: 3rem 0 2rem;
+}
+
+.ball_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.ball_list > p {
+    background-color: var(--darkBg);
+    border: 1px solid var(--darkBgBorder);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+}

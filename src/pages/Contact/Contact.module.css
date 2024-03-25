@@ -1,0 +1,23 @@
+.article {
+    height: 100%;
+    padding: 3rem 1rem;
+}
+
+.article h1 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+.article a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    width: fit-content;
+}
+
+.article i {
+    font-size: 0.75rem;
+    color: var(--thirdTxtColor);
+}
