@@ -9,6 +9,19 @@ import profilePicture from './../../assets/profile_picture.png';
 import reddNotesPicture from './../../assets/reddnotes_picture.png';
 import whatsHackPicture from './../../assets/whatshack_picture.png';
 import brickBreakerPicture from './../../assets/brickbreaker_picture.png';
+import comodoPicture1 from './../../assets/comodo_picture1.png';
+import comodoPicture2 from './../../assets/comodo_picture2.png';
+import lazerPicture1 from './../../assets/lazer_picture1.png';
+import lazerPicture2 from './../../assets/lazer_picture2.jpg';
+import lazerPicture3 from './../../assets/lazer_picture3.jpg';
+import rafalePicture from './../../assets/rafale_picture.png';
+import serverPicture1 from './../../assets/server_picture1.png';
+import serverPicture2 from './../../assets/server_picture2.jpg';
+import serverPicture3 from './../../assets/server_picture3.jpg';
+import wheelPicture1 from './../../assets/wheel_picture1.png';
+import wheelPicture2 from './../../assets/wheel_picture2.jpg';
+import wheelPicture3 from './../../assets/wheel_picture3.jpg';
+import wheelPicture4 from './../../assets/wheel_picture4.jpg';
 
 export default function Welcome({ language }) {
     return (
@@ -46,7 +59,7 @@ export default function Welcome({ language }) {
                                 }
                             </p>
                         </section>
-                        <Link to={"/contact"} className='blue'>{language === "fr" ? "Prendre contact" : "Get in touch"}</Link>
+                        <Link to={"/contact"} className='blue button inline'>{language === "fr" ? "Prendre contact" : "Get in touch"}</Link>
                         <a href="https://linkedin.com/in/hugo-maurin" target="_blank" rel="noopener noreferrer">{language === "fr" ? "En savoir plus..." : "Know more..."}</a>
                     </div>
                     <div>
@@ -79,7 +92,7 @@ export default function Welcome({ language }) {
                 <section className={s.projects}>
                     <section className={s.project}>
                         <div className={s.project_img}>
-                            <img src={reddNotesPicture} alt="ReddNotes Picture" />
+                            <a href="https://reddnotes.netlify.app" target="_blank" rel="noopener noreferrer"><img src={reddNotesPicture} alt="ReddNotes Picture" /></a>
                         </div>
                         <div className={s.project_text}>
                             <div className={s.description}>
@@ -106,7 +119,7 @@ export default function Welcome({ language }) {
                     </section>
                     <section className={`${s.project} ${s.reverse}`}>
                         <div className={s.project_img}>
-                            <img src={whatsHackPicture} alt="WhatsHack Picture" />
+                            <a href="https://whatshack.netlify.app" target="_blank" rel="noopener noreferrer"><img src={whatsHackPicture} alt="WhatsHack Picture" /></a>
                         </div>
                         <div className={s.project_text}>
                             <div className={s.description}>
@@ -133,7 +146,7 @@ export default function Welcome({ language }) {
                     </section>
                     <section className={s.project}>
                         <div className={s.project_img}>
-                            <img src={brickBreakerPicture} alt="BrickBreaker Picture" />
+                            <a href="https://huguiz.github.io/Brick-Breaker" target="_blank" rel="noopener noreferrer"><img src={brickBreakerPicture} alt="BrickBreaker Picture" /></a>
                         </div>
                         <div className={s.project_text}>
                             <div className={s.description}>
@@ -159,7 +172,7 @@ export default function Welcome({ language }) {
                         </div>
                     </section>
                 </section>
-                <Link to="/portfolio" className='blue'>
+                <Link to="/portfolio" className='blue button'>
                     {
                         language === "fr"
                             ? "Voir plus"
@@ -176,51 +189,51 @@ export default function Welcome({ language }) {
                             : "Techs and tools I use"
                     }
                 </p>
-                <section className={s.ball_list}>
-                    <p>HTML</p>
-                    <p>CSS</p>
-                    <p>JavaScript ES6</p>
-                    <p>React</p>
-                    <p>Express</p>
-                    <p>MongoDB</p>
-                    <p>Python 3.7</p>
-                    <p>Git</p>
-                    <p>GitHub</p>
-                    <p>Tailwind CSS</p>
-                    <p>Mongoose</p>
-                    <p>Axios</p>
-                    <p>VSCode</p>
-                    <p>Figma</p>
+                <section className="ball_list">
+                    <p className='ball'>HTML</p>
+                    <p className='ball'>CSS</p>
+                    <p className='ball'>JavaScript ES6</p>
+                    <p className='ball'>React</p>
+                    <p className='ball'>Express</p>
+                    <p className='ball'>MongoDB</p>
+                    <p className='ball'>Python 3.7</p>
+                    <p className='ball'>Git</p>
+                    <p className='ball'>GitHub</p>
+                    <p className='ball'>Tailwind CSS</p>
+                    <p className='ball'>Mongoose</p>
+                    <p className='ball'>Axios</p>
+                    <p className='ball'>VSCode</p>
+                    <p className='ball'>Figma</p>
                 </section>
                 <p>
                     {
                         language === "fr"
-                            ? "Les techs que j'ai apprises en réseaux et télécoms"
-                            : "Techs I've learned in networks and telecoms"
+                            ? "Les techs que j'ai acquises en réseaux et télécoms"
+                            : "Techs I've acquired in networks and telecoms"
                     }
                 </p>
-                <section className={s.ball_list}>
-                    <p>IPv4 & </p>
-                    <p>TCP</p>
-                    <p>UDP</p>
-                    <p>DNS</p>
-                    <p>HTTP</p>
-                    <p>FTP</p>
-                    <p>SSH</p>
-                    <p>{language === "fr" ? "Les autres `common protocols` " : "Many others common protocol"}</p>
-                    <p>{language === "fr" ? "Modèle OSI" : "OSI Model"}</p>
-                    <p>{language === "fr" ? "Routage" : "Routing"}</p>
-                    <p>{language === "fr" ? "Redirection de port" : "Port forwarding"}</p>
-                    <p>{language === "fr" ? "Pare-feu" : "Firewall"}</p>
-                    <p>{language === "fr" ? "Cybersécurité" : "Cybersecurity"}</p>
+                <section className="ball_list">
+                    <p className='ball'>IPv4 & </p>
+                    <p className='ball'>TCP</p>
+                    <p className='ball'>UDP</p>
+                    <p className='ball'>DNS</p>
+                    <p className='ball'>HTTP</p>
+                    <p className='ball'>FTP</p>
+                    <p className='ball'>SSH</p>
+                    <p className='ball'>{language === "fr" ? "Les autres `common protocols` " : "Many others common protocol"}</p>
+                    <p className='ball'>{language === "fr" ? "Modèle OSI" : "OSI Model"}</p>
+                    <p className='ball'>{language === "fr" ? "Routage" : "Routing"}</p>
+                    <p className='ball'>{language === "fr" ? "Redirection de port" : "Port forwarding"}</p>
+                    <p className='ball'>{language === "fr" ? "Pare-feu" : "Firewall"}</p>
+                    <p className='ball'>{language === "fr" ? "Cybersécurité" : "Cybersecurity"}</p>
                 </section>
             </article>
             <article className={s.hobbies}>
                 <h2>{
-                        language === "fr"
-                            ? "Mes passions"
-                            : "My hobbies"
-                    }</h2>
+                    language === "fr"
+                        ? "Mes passions"
+                        : "My hobbies"
+                }</h2>
                 <p>
                     {
                         language === "fr"
@@ -228,14 +241,47 @@ export default function Welcome({ language }) {
                             : "My tech-related passions, realized in a personal context"
                     }
                 </p>
-                <section className={s.ball_list}>
-                    <p>{language === "fr" ? "Programmation sur Arduino, Raspberry & ESP32" : "Programming on Arduino, Raspberry & ESP32"}</p>
-                    <p>{language === "fr" ? "Impression 3D" : "3D Printing"}</p>
-                    <p>{language === "fr" ? "Serveur NAS DIY" : "DIY NAS serveur"}</p>
-                    <p>{language === "fr" ? "Graveuse laser CNC DIY" : "DIY CNC laser engraver"}</p>
-                    <p>{language === "fr" ? "Drone DIY" : "DIY Quadcopter"}</p>
-                    <p>{language === "fr" ? "Volant de course gaming DIY" : "DIY Steering wheel gaming"}</p>
-                    <p>{language === "fr" ? "Modélisation 3D" : "3D Modeling"}</p>
+                <section className="ball_list">
+                    <p className='ball'>{language === "fr" ? "Programmation sur Arduino, Raspberry & ESP32" : "Programming on Arduino, Raspberry & ESP32"}</p>
+                    <p className='ball'>{language === "fr" ? "Impression 3D" : "3D Printing"}</p>
+                    <p className='ball'>{language === "fr" ? "Drone DIY" : "DIY Quadcopter"}</p>
+                </section>
+                <hr />
+                <section className={s.hobbies_list}>
+                    <p className='ball'>{language === "fr" ? "Graveuse laser CNC DIY" : "DIY CNC laser engraver"}</p>
+                    <div>
+                        <img src={lazerPicture1} alt="Lazer Picture" />
+                        <img src={lazerPicture2} alt="Lazer Picture" />
+                        <img src={lazerPicture3} alt="Lazer Picture" />
+                    </div>
+                </section>
+                <hr />
+                <section className={s.hobbies_list}>
+                    <p className='ball'>{language === "fr" ? "Volant de course gaming DIY" : "DIY Steering wheel gaming"}</p>
+                    <div>
+                        <img src={wheelPicture1} alt="Steering wheel Picture" />
+                        <img src={wheelPicture2} alt="Steering wheel Picture" />
+                        <img src={wheelPicture3} alt="Steering wheel Picture" />
+                        <img src={wheelPicture4} alt="Steering wheel Picture" />
+                    </div>
+                </section>
+                <hr />
+                <section className={s.hobbies_list}>
+                    <p className='ball'>{language === "fr" ? "Serveur NAS DIY" : "DIY NAS serveur"}</p>
+                    <div>
+                        <img src={serverPicture1} alt="Server Picture" />
+                        <img src={serverPicture2} alt="Server Picture" />
+                        <img src={serverPicture3} alt="Server Picture" />
+                    </div>
+                </section>
+                <hr />
+                <section className={s.hobbies_list}>
+                    <p className='ball'>{language === "fr" ? "Modélisation 3D" : "3D Modeling"}</p>
+                    <div>
+                        <img src={comodoPicture1} alt="Comodo Picture" />
+                        <img src={comodoPicture2} alt="Comodo Picture" />
+                        <img src={rafalePicture} alt="Rafale Picture" />
+                    </div>
                 </section>
             </article>
         </>

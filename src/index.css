@@ -5,7 +5,73 @@ body {
     padding: 0;
     height: 100vh;
     font-family: 'Roboto';
-    --mainBg: linear-gradient(115deg, var(--firstBgcolor), var(--firstBgcolor) 29.80%, var(--secondBgcolor) 0, var(--secondBgcolor) 29.90%, var(--firstBgcolor) 0, var(--firstBgcolor) 30.05%, var(--secondBgcolor) 0, var(--secondBgcolor) 30.15%, var(--firstBgcolor) 0, var(--firstBgcolor) 30.15%, var(--secondBgcolor) 0, var(--secondBgcolor) 30.15%, var(--firstBgcolor) 0, var(--firstBgcolor) 30.3%, var(--secondBgcolor) 0, var(--secondBgcolor) 30.45%, var(--firstBgcolor) 0, var(--firstBgcolor) 30.6%, var(--secondBgcolor) 0, var(--secondBgcolor) 30.75%, var(--firstBgcolor) 0, var(--firstBgcolor) 30.9%, var(--secondBgcolor) 0, var(--secondBgcolor) 31.05%, var(--firstBgcolor) 0, var(--firstBgcolor) 31.2%, var(--secondBgcolor) 0, var(--secondBgcolor) 31.35%, var(--firstBgcolor) 0, var(--firstBgcolor) 31.5%, var(--secondBgcolor) 0, var(--secondBgcolor) 31.65%, var(--firstBgcolor) 0, var(--firstBgcolor) 31.8%, var(--secondBgcolor) 0, var(--secondBgcolor) 31.95%, var(--secondBgcolor) 33.5%, var(--firstBgcolor) 0, var(--firstBgcolor) 73%, var(--firstBgcolor) 74%, var(--firstBgcolor) 79%);
+    --mainBg: linear-gradient(115deg,
+            var(--firstBgcolor),
+            var(--firstBgcolor) 29.80%,
+            var(--secondBgcolor) 0,
+            var(--secondBgcolor) 29.90%,
+            var(--firstBgcolor) 0,
+            var(--firstBgcolor) 30.05%,
+            var(--secondBgcolor) 0,
+            var(--secondBgcolor) 30.15%,
+            var(--firstBgcolor) 0,
+            var(--firstBgcolor) 30.3%,
+            var(--secondBgcolor) 0,
+            var(--secondBgcolor) 30.45%,
+            var(--firstBgcolor) 0,
+            var(--firstBgcolor) 30.6%,
+            var(--secondBgcolor) 0,
+            var(--secondBgcolor) 30.75%,
+            var(--firstBgcolor) 0,
+            var(--firstBgcolor) 30.9%,
+            var(--secondBgcolor) 0,
+            var(--secondBgcolor) 31.05%,
+            var(--firstBgcolor) 0,
+            var(--firstBgcolor) 31.2%,
+            var(--secondBgcolor) 0,
+            var(--secondBgcolor) 31.35%,
+            var(--firstBgcolor) 0,
+            var(--firstBgcolor) 31.5%,
+            var(--secondBgcolor) 0,
+            var(--secondBgcolor) 31.65%,
+            var(--firstBgcolor) 0,
+            var(--firstBgcolor) 31.8%,
+            var(--secondBgcolor) 0,
+            var(--secondBgcolor) 33.5%,
+            var(--firstBgcolor) 0,
+            var(--firstBgcolor) 73%,
+            var(--secondBgcolor) 0,
+            var(--secondBgcolor) 74.7%,
+            var(--firstBgcolor) 0,
+            var(--firstBgcolor) 74.85%,
+            var(--secondBgcolor) 0,
+            var(--secondBgcolor) 75%,
+            var(--firstBgcolor) 0,
+            var(--firstBgcolor) 75.15%,
+            var(--secondBgcolor) 0,
+            var(--secondBgcolor) 75.30%,
+            var(--firstBgcolor) 0,
+            var(--firstBgcolor) 75.45%,
+            var(--secondBgcolor) 0,
+            var(--secondBgcolor) 75.60%,
+            var(--firstBgcolor) 0,
+            var(--firstBgcolor) 75.75%,
+            var(--secondBgcolor) 0,
+            var(--secondBgcolor) 75.90%,
+            var(--firstBgcolor) 0,
+            var(--firstBgcolor) 76.05%,
+            var(--secondBgcolor) 0,
+            var(--secondBgcolor) 76.20%,
+            var(--firstBgcolor) 0,
+            var(--firstBgcolor) 76.35%,
+            var(--secondBgcolor) 0,
+            var(--secondBgcolor) 76.45%,
+            var(--firstBgcolor) 0,
+            var(--firstBgcolor) 76.60%,
+            var(--secondBgcolor) 0,
+            var(--secondBgcolor) 76.70%,
+            var(--firstBgcolor) 0,
+            var(--firstBgcolor) 83%);
     --firstBgcolor: rgb(40, 40, 40);
     --secondBgcolor: rgb(61, 61, 61);
     --darkBg: rgb(32, 32, 32);
@@ -66,9 +132,22 @@ footer {
 }
 
 a.blue {
-    background-color:cornflowerblue;
+    background-color: cornflowerblue;
     padding: 0.6rem 1rem;
     border-radius: 0.6rem;
+}
+
+a.button {
+    transition: 0.3s;
+}
+
+a.inline {
+    display: inline-block;
+}
+
+a.button:hover {
+    transform: scale(0.98);
+    opacity: 0.9;
 }
 
 #scrollbar::-webkit-scrollbar {
@@ -83,4 +162,23 @@ a.blue {
 #scrollbar::-webkit-scrollbar-thumb {
     border-radius: 5px;
     background-color: var(--darkBg);
+}
+
+.ball_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.ball {
+    text-align: center;
+    width: fit-content;
+    background-color: var(--darkBg);
+    border: 1px solid var(--darkBgBorder);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    font-weight: 300;
 }

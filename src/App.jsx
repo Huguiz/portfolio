@@ -4,7 +4,7 @@ import { useState } from "react";
 
 //page
 import Welcome from "./pages/Welcome/Welcome";
-// import Portfolio from "./pages/Portfolio/Portfolio";
+import Portfolio from "./pages/Portfolio/Portfolio";
 import Contact from "./pages/Contact/Contact";
 
 
@@ -25,7 +25,7 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Welcome language={language} />} />
-          <Route path="/portfolio" element={<p>Portfolio</p>} />
+          <Route path="/portfolio" element={<Portfolio language={language} />} />
           <Route path="/contact" element={<Contact language={language} />} />
           <Route path="*" element={<Navigate to={"/"} />} />
         </Routes>
