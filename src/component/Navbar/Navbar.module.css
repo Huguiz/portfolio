@@ -10,22 +10,26 @@
     cursor: pointer;
 }
 
-.link {
+.links {
     display: flex;
     gap: 2rem;
     letter-spacing: 0.12rem;
 }
 
-.link a {
+.tab {
+    display: none;
+}
+
+.link {
     color: var(--secondTxtcolor);
     transition: 0.3s;
 }
 
-.link a:hover {
+.link:hover {
     color: rgb(90, 90, 90);
 }
 
-.link a.active {
+.link.active {
     color: var(--mainTxtColor);
     transform: scale(1.1);
 }
@@ -46,4 +50,39 @@
 
 .github img {
     height: 100%;
+}
+
+@media screen and (max-width: 620px) {
+    .article {
+        align-items: start;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 1.75rem;
+        align-items: center;
+    }
+
+    .links > a:last-child {
+        padding-bottom: 1rem;
+    }
+
+    .tab {
+        display: inherit;
+        width: 32px;
+        height: 28px;
+        box-sizing: border-box;
+        padding: 3px;
+        margin: 2px 0;
+        border: 1px solid var(--darkBgBorder);
+        border-radius: 0.4rem;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .flag {
+        width: 83.25px;
+    }
 }

@@ -7,7 +7,6 @@ import Welcome from "./pages/Welcome/Welcome";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Contact from "./pages/Contact/Contact";
 
-
 //component
 import Navbar from "./component/Navbar/Navbar";
 import Footer from "./component/Footer/Footer";

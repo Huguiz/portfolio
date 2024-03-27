@@ -1,5 +1,7 @@
 // module
+import React, { useState, useCallback } from "react";
 import { Link } from 'react-router-dom';
+import ImageViewer from "react-simple-image-viewer";
 
 // style
 import s from './Welcome.module.css';
@@ -24,6 +26,46 @@ import wheelPicture3 from './../../assets/wheel_picture3.jpg';
 import wheelPicture4 from './../../assets/wheel_picture4.jpg';
 
 export default function Welcome({ language }) {
+    const [currentImage, setCurrentImage] = useState(0);
+    const [currentImages, setCurrentImages] = useState(0);
+    const [isViewerOpen, setIsViewerOpen] = useState(false);
+
+    const lazerPictures = [
+        lazerPicture1,
+        lazerPicture2,
+        lazerPicture3
+    ];
+
+    const serverPictures = [
+        serverPicture1,
+        serverPicture2,
+        serverPicture3
+    ];
+
+    const wheelPictures = [
+        wheelPicture1,
+        wheelPicture2,
+        wheelPicture3,
+        wheelPicture4
+    ];
+
+    const modelingPictures = [
+        comodoPicture1,
+        comodoPicture2,
+        rafalePicture
+    ];
+
+    const openImageViewer = useCallback((index, imagesIndex) => {
+        setCurrentImage(index);
+        setCurrentImages(imagesIndex);
+        setIsViewerOpen(true);
+    }, []);
+
+    const closeImageViewer = () => {
+        setCurrentImage(0);
+        setIsViewerOpen(false);
+    };
+
     return (
         <>
             <article className={s.presentation}>
@@ -249,37 +291,79 @@ export default function Welcome({ language }) {
                 <section className={s.hobbies_list}>
                     <p className='ball'>{language === "fr" ? "Graveuse laser CNC DIY" : "DIY CNC laser engraver"}</p>
                     <div>
-                        <img src={lazerPicture1} alt="Lazer Picture" />
-                        <img src={lazerPicture2} alt="Lazer Picture" />
-                        <img src={lazerPicture3} alt="Lazer Picture" />
+                        {
+                            lazerPictures.map((src, index) => (
+                                <img
+                                    src={src}
+                                    onClick={() => openImageViewer(index, lazerPictures)}
+                                    key={index}
+                                    alt={`${src} picture`}
+                                />
+                            ))
+                        }
                     </div>
                 </section>
                 <section className={s.hobbies_list}>
                     <p className='ball'>{language === "fr" ? "Volant de course gaming DIY" : "DIY Steering wheel gaming"}</p>
                     <div>
-                        <img src={wheelPicture1} alt="Steering wheel Picture" />
-                        <img src={wheelPicture2} alt="Steering wheel Picture" />
-                        <img src={wheelPicture3} alt="Steering wheel Picture" />
-                        <img src={wheelPicture4} alt="Steering wheel Picture" />
+                        {
+                            wheelPictures.map((src, index) => (
+                                <img
+                                    src={src}
+                                    onClick={() => openImageViewer(index, wheelPictures)}
+                                    key={index}
+                                    alt={`${src} picture`}
+                                />
+                            ))
+                        }
                     </div>
                 </section>
                 <section className={s.hobbies_list}>
                     <p className='ball'>{language === "fr" ? "Serveur NAS DIY" : "DIY NAS serveur"}</p>
                     <div>
-                        <img src={serverPicture1} alt="Server Picture" />
-                        <img src={serverPicture2} alt="Server Picture" />
-                        <img src={serverPicture3} alt="Server Picture" />
+                        {
+                            serverPictures.map((src, index) => (
+                                <img
+                                    src={src}
+                                    onClick={() => openImageViewer(index, serverPictures)}
+                                    key={index}
+                                    alt={`${src} picture`}
+                                />
+                            ))
+                        }
                     </div>
                 </section>
                 <section className={s.hobbies_list}>
                     <p className='ball'>{language === "fr" ? "Modélisation 3D" : "3D Modeling"}</p>
                     <div>
-                        <img src={comodoPicture1} alt="Comodo Picture" />
-                        <img src={comodoPicture2} alt="Comodo Picture" />
-                        <img src={rafalePicture} alt="Rafale Picture" />
+                        {
+                            modelingPictures.map((src, index) => (
+                                <img
+                                    src={src}
+                                    onClick={() => openImageViewer(index, modelingPictures)}
+                                    key={index}
+                                    alt={`${src} picture`}
+                                />
+                            ))
+                        }
                     </div>
                 </section>
             </article>
+            {
+                    isViewerOpen && (
+                        <ImageViewer
+                            src={currentImages}
+                            // src={["https://lh3.googleusercontent.com/proxy/bWt6RkYNjj6wGc_pul_F-q7uEZ5MW9RW3EYPKNXfENVVTdpGxj-dgg3e7qsjQIJtuRWnF-vRh2EEZgAveoJnuBd1xpTZNSm7KWd73QzjdvXlmmqURJaO2EAAsMoRlACQm7wiDEzbcg"]}
+                            currentIndex={currentImage}
+                            onClose={closeImageViewer}
+                            disableScroll={true}
+                            backgroundStyle={{
+                                backgroundColor: "rgba(0,0,0,0.75)",
+                                padding: "30px 60px"
+                            }}
+                            closeOnClickOutside={true}
+                        />
+                    )}
         </>
     )
 }

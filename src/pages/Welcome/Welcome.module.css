@@ -38,14 +38,15 @@
 .skill_bar {
     max-width: none;
     background-color: cornflowerblue;
-    padding: 0.8rem 1rem;
+    padding: 0.8rem 1rem 0.8rem 2rem;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .skill_bar ul {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    gap: 3rem;
+    gap: 1.5rem 3rem;
     justify-content: center;
     font-size: 0.9rem;
     font-weight: 300;
@@ -56,7 +57,11 @@
 }
 
 .projects {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0;
     padding: 1rem 0;
+    gap: 8rem;
 }
 
 .last_project > a {
@@ -72,7 +77,6 @@
 }
 
 .project {
-    margin: 4rem 0;
     display: flex;
     gap: 2rem;
 }
@@ -144,6 +148,55 @@
 
 .hobbies_list img {
     max-height: 15rem;
+    max-width: 100%;
     border-radius: 1rem;
     border: 2px solid var(--thirdTxtColor);
+}
+
+.hobbies img:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 1023px) {
+    .presentation, .last_project, .skills, .hobbies {
+        padding: 5rem 1.5rem;
+    }
+
+    .presentation_split img {
+        max-width: 300px;
+    }
+
+    .projects {
+        align-items: center;
+    }
+
+    .project, .project.reverse {
+        flex-direction: column;
+    }
+
+    .project a {
+        align-self: inherit;
+        padding-top: 1.5rem;
+    }
+
+    .project_img {
+        width: 75%;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .presentation, .last_project, .skills, .hobbies {
+        padding: 4rem 2rem;
+    }
+
+    .presentation_split {
+        flex-direction: column-reverse;
+    }
+
+    .presentation_split img {
+        max-width: 200px;
+        width: 90%;
+    }
 }
