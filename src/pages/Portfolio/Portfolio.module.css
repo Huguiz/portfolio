@@ -45,6 +45,7 @@
 }
 
 .description {
+    color: var(--secondTxtColor);
     font-size: 0.9rem;
     padding-top: 0.5rem;
 }
@@ -67,7 +68,13 @@
 .links {
     display: flex;
     justify-content: space-between;
+    font-weight: 300;
     font-style: italic;
+}
+
+.links a {
+    
+    color: var(--secondTxtColor);
 }
 
 .last_link {

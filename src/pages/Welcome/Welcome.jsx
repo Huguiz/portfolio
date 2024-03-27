@@ -97,7 +97,7 @@ export default function Welcome({ language }) {
                         <div className={s.project_text}>
                             <div className={s.description}>
                                 <h3>
-                                    ReddNotes - <i>2024</i>
+                                    ReddNotes
                                 </h3>
                                 <p>
                                     {
@@ -124,7 +124,7 @@ export default function Welcome({ language }) {
                         <div className={s.project_text}>
                             <div className={s.description}>
                                 <h3>
-                                    WhatsHack - <i>2024</i>
+                                    WhatsHack
                                 </h3>
                                 <p>
                                     {
@@ -151,7 +151,7 @@ export default function Welcome({ language }) {
                         <div className={s.project_text}>
                             <div className={s.description}>
                                 <h3>
-                                    Brick Breaker 🧱 - <i>2024</i>
+                                    Brick Breaker 🧱
                                 </h3>
                                 <p>
                                     {
@@ -246,7 +246,6 @@ export default function Welcome({ language }) {
                     <p className='ball'>{language === "fr" ? "Impression 3D" : "3D Printing"}</p>
                     <p className='ball'>{language === "fr" ? "Drone DIY" : "DIY Quadcopter"}</p>
                 </section>
-                <hr />
                 <section className={s.hobbies_list}>
                     <p className='ball'>{language === "fr" ? "Graveuse laser CNC DIY" : "DIY CNC laser engraver"}</p>
                     <div>
@@ -255,7 +254,6 @@ export default function Welcome({ language }) {
                         <img src={lazerPicture3} alt="Lazer Picture" />
                     </div>
                 </section>
-                <hr />
                 <section className={s.hobbies_list}>
                     <p className='ball'>{language === "fr" ? "Volant de course gaming DIY" : "DIY Steering wheel gaming"}</p>
                     <div>
@@ -265,7 +263,6 @@ export default function Welcome({ language }) {
                         <img src={wheelPicture4} alt="Steering wheel Picture" />
                     </div>
                 </section>
-                <hr />
                 <section className={s.hobbies_list}>
                     <p className='ball'>{language === "fr" ? "Serveur NAS DIY" : "DIY NAS serveur"}</p>
                     <div>
@@ -274,7 +271,6 @@ export default function Welcome({ language }) {
                         <img src={serverPicture3} alt="Server Picture" />
                     </div>
                 </section>
-                <hr />
                 <section className={s.hobbies_list}>
                     <p className='ball'>{language === "fr" ? "Modélisation 3D" : "3D Modeling"}</p>
                     <div>

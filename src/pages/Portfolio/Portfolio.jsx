@@ -1,5 +1,5 @@
 // module
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 // style
 import s from './Portfolio.module.css';
@@ -9,6 +9,7 @@ import reddNotesPicture from './../../assets/reddnotes_picture.png';
 import whatsHackPicture from './../../assets/whatshack_picture.png';
 import brickBreakerPicture from './../../assets/brickbreaker_picture.png';
 import fermeSaintJeanPicture from './../../assets/fermesaintjean_picture.png';
+import decoderPicture from './../../assets/decoder_picture.png';
 
 import axiosLogo from './../../assets/stack/axios.png';
 import cssLogo from './../../assets/stack/css.png';
@@ -23,6 +24,10 @@ import websocketLogo from './../../assets/stack/websocket.png';
 import linkLogo from './../../assets/link_logo.png';
 
 export default function Portfolio({ language }) {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
+    
     return (
         <article className={s.article}>
             <h1>
@@ -57,7 +62,7 @@ export default function Portfolio({ language }) {
                                 <p className={s.description}>
                                 {
                                     language === "fr"
-                                        ? "J'ai développé cette appli avec un ami rencontré au bootcamp (Dyma)."
+                                        ? "J'ai développé cette app avec un ami rencontré au bootcamp (Dyma)."
                                         : "I developed this app with a friend I met at bootcamp."
                                 }
                             </p>
@@ -72,6 +77,40 @@ export default function Portfolio({ language }) {
                             </div>
                             <div className={s.links}>
                                 <a href="https://reddnotes.netlify.app" target="_blank" rel="noopener noreferrer">https://reddnotes.netlify.app</a><a href="https://github.com/orgs/ReddNotes/repositories" target="_blank" rel="noopener noreferrer">Repo →</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className={s.project}>
+                    <div className={s.project_img}>
+                        <a href="https://github.com/Huguiz/Decodeur" target="_blank" rel="noopener noreferrer"><img src={decoderPicture} alt="ReddNotes Picture" /></a>
+                    </div>
+                    <div className={s.project_text}>
+                        <div>
+                            <h3>{language === "fr" ? "Décodeur" : "Decoder"
+                                }</h3>
+                            <p className={s.description}>
+                                {
+                                    language === "fr"
+                                        ? "J'ai conçu cette application lors de mon précédent emploi dans le secteur de la vidéosurveillance. L'app est composée de 2 logiciels : le décodeur, chargé de lire divers médias tels que des flux de caméra, des vidéos, des images ou des GIF, et le SDK, responsable de piloter le décodeur."
+                                        : "I designed this application during my previous job in the video surveillance sector. The app is made up of 2 pieces of software: the decoder, responsible for playing various media such as camera feeds, videos, images or GIFs, and the SDK, responsible for driving the decoder."
+                                }
+                                <br />
+                                <br />
+                                {
+                                    language === "fr"
+                                        ? "L'application a été développée en Python, et la communication s'effectue via des sockets. Le manuel d'utilisation est disponible sur le repo GitHub."
+                                        : "The application has been developed in Python, and communication is via sockets. The user manual is available on the GitHub repo."
+                                }
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Stacks</h4>
+                            <div className={`${s.stacks}`}>
+                                <img className='ball' src={pythonLogo} alt="Python logo" />
+                            </div>
+                            <div className={s.links}>
+                                <a href=""></a><a href="https://github.com/Huguiz/Decodeur" target="_blank" rel="noopener noreferrer">Repo →</a>
                             </div>
                         </div>
                     </div>
@@ -100,7 +139,7 @@ export default function Portfolio({ language }) {
                                 <p className={s.description}>
                                 {
                                     language === "fr"
-                                        ? "J'ai développé cette appli avec un ami rencontré au bootcamp (Dyma)."
+                                        ? "J'ai développé cette app avec un ami rencontré au bootcamp (Dyma)."
                                         : "I developed this app with a friend I met at bootcamp."
                                 }
                             </p>
@@ -134,7 +173,7 @@ export default function Portfolio({ language }) {
                                 <p className={s.description}>
                                 {
                                     language === "fr"
-                                        ? "Le jeu a été développé avec seulement HTML, CSS et Javascript. L'animation des éléments est faite avec la DOM manipulation."
+                                        ? "Le jeu a été développé avec seulement HTML, CSS et Javascript. L'animation des éléments est faite avec la manipulation du DOM."
                                         : "The game was developed using only HTML, CSS and Javascript. Elements are animated using DOM manipulation."
                                 }
                             </p>
@@ -162,15 +201,15 @@ export default function Portfolio({ language }) {
                             <p className={s.description}>
                                 {
                                     language === "fr"
-                                        ? "Un site que j'ai réalisé pour un ami. C'est un site vitrine qui présente sa ferme et ses productions."
-                                        : "ReddNotes is an application similar to Reddit, enabling users to create, like and comment on notes on a variety of subjects. Each user has an editable profile and can save their favorite notes."
+                                        ? "J'ai conçu ce site pour un ami. C'est un site vitrine qui présente sa ferme et ses productions."
+                                        : "I designed this site for a friend. It's a showcase site presenting his farm and its products."
                                 }
                                 <br />
                                 <br />
                                 {
                                     language === "fr"
-                                        ? "Le site est simple, il comporte 3 pages et utilise le framework React."
-                                        : "Based on WebSocket, the application offers a fluid, real-time experience for easy interaction with the community."
+                                        ? "Le site est simple, il comporte 3 pages et a été développé en utilisant le framework React, offrant ainsi une expérience interactive et dynamique."
+                                        : "The site is simple, with 3 pages, and has been developed using the React framework, offering an interactive and dynamic experience."
                                 }
                             </p>
                         </div>
@@ -178,43 +217,10 @@ export default function Portfolio({ language }) {
                             <h4>Stacks</h4>
                             <div className={`${s.stacks}`}>
                                 <img className='ball' src={reactLogo} alt="React logo" />
+                                <img className='ball' src={tailwindCssLogo} alt="Tailwind CSS logo" />
                             </div>
                             <div className={s.links}>
                                 <a href="https://fermesaintjean.fr" target="_blank" rel="noopener noreferrer">https://fermesaintjean.fr</a><a href="https://github.com/Huguiz/FermeSaintJean" target="_blank" rel="noopener noreferrer">Repo →</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section className={s.project}>
-                    <div className={s.project_img}>
-                        <a href="https://github.com/Huguiz/Decodeur" target="_blank" rel="noopener noreferrer"><img src={reddNotesPicture} alt="ReddNotes Picture" /></a>
-                    </div>
-                    <div className={s.project_text}>
-                        <div>
-                            <h3>{language === "fr" ? "Décodeur" : "Decoder"
-                                }</h3>
-                            <p className={s.description}>
-                                {
-                                    language === "fr"
-                                        ? "ReddNotes est une application similaire à Reddit, permettant aux utilisateurs de créer, aimer et commenter des notes sur divers sujets. Chaque utilisateur dispose d'un profil éditable et peut enregistrer ses notes préférées."
-                                        : "ReddNotes is an application similar to Reddit, enabling users to create, like and comment on notes on a variety of subjects. Each user has an editable profile and can save their favorite notes."
-                                }
-                                <br />
-                                <br />
-                                {
-                                    language === "fr"
-                                        ? "Basée sur WebSocket, l'application offre une expérience fluide et en temps réel pour une interaction facile avec la communauté."
-                                        : "Based on WebSocket, the application offers a fluid, real-time experience for easy interaction with the community."
-                                }
-                            </p>
-                        </div>
-                        <div>
-                            <h4>Stacks</h4>
-                            <div className={`${s.stacks}`}>
-                                <img className='ball' src={pythonLogo} alt="Python logo" />
-                            </div>
-                            <div className={s.links}>
-                                <a href=""></a><a href="https://github.com/Huguiz/Decodeur" target="_blank" rel="noopener noreferrer">Repo →</a>
                             </div>
                         </div>
                     </div>

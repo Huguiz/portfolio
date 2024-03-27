@@ -18,11 +18,11 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    color: var(--secondtTxtColor);
+    color: var(--secondTxtColor);
 }
 
 .presentation_text p {
-    color: var(--secondtTxtColor);
+    color: var(--secondTxtColor);
 }
 
 .presentation_split img {
@@ -99,20 +99,16 @@
     border-color: cornflowerblue;
 }
 
-.project i {
-    font-weight: 300;
-}
-
 .description p {
     margin-top: 1.5rem;
     text-align: justify;
-    color: var(--secondtTxtColor);
+    color: var(--secondTxtColor);
 }
 
 .project a {
     align-self: flex-end;
     text-decoration: underline;
-    color: var(--secondtTxtColor);
+    color: var(--secondTxtColor);
     font-style: italic;
 }
 
@@ -121,7 +117,7 @@
 }
 
 .skills > p, .hobbies > p {
-    color: var(--secondtTxtColor);
+    color: var(--secondTxtColor);
     padding: 3rem 0 2rem;
 }
 
