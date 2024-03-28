@@ -69,7 +69,7 @@ export default function Portfolio({ language }) {
                         </div>
                         <div>
                             <h4>Stacks</h4>
-                            <div className={`${s.stacks}`}>
+                            <div className={s.stacks}>
                                 <img className='ball' src={reactLogo} alt="React logo" />
                                 <img className='ball' src={expressLogo} alt="Express logo" />
                                 <img className='ball' src={mongoDbLogo} alt="MongoDB logo" />
@@ -106,7 +106,7 @@ export default function Portfolio({ language }) {
                         </div>
                         <div>
                             <h4>Stacks</h4>
-                            <div className={`${s.stacks}`}>
+                            <div className={s.stacks}>
                                 <img className='ball' src={pythonLogo} alt="Python logo" />
                             </div>
                             <div className={s.links}>
@@ -146,7 +146,7 @@ export default function Portfolio({ language }) {
                         </div>
                         <div>
                             <h4>Stacks</h4>
-                            <div className={`${s.stacks}`}>
+                            <div className={s.stacks}>
                                 <img className='ball' src={reactLogo} alt="React logo" />
                                 <img className='ball' src={expressLogo} alt="Express logo" />
                             </div>
@@ -180,7 +180,7 @@ export default function Portfolio({ language }) {
                         </div>
                         <div>
                             <h4>Stacks</h4>
-                            <div className={`${s.stacks}`}>
+                            <div className={s.stacks}>
                                 <img className='ball' src={html5Logo} alt="HTML5 logo" />
                                 <img className='ball' src={cssLogo} alt="CSS3 logo" />
                                 <img className='ball' src={javascriptLogo} alt="JavaScript logo" />
@@ -215,7 +215,7 @@ export default function Portfolio({ language }) {
                         </div>
                         <div>
                             <h4>Stacks</h4>
-                            <div className={`${s.stacks}`}>
+                            <div className={s.stacks}>
                                 <img className='ball' src={reactLogo} alt="React logo" />
                                 <img className='ball' src={tailwindCssLogo} alt="Tailwind CSS logo" />
                             </div>

@@ -244,6 +244,7 @@ export default function Welcome({ language }) {
                     <p className='ball'>Tailwind CSS</p>
                     <p className='ball'>Mongoose</p>
                     <p className='ball'>Axios</p>
+                    <p className='ball'>API</p>
                     <p className='ball'>VSCode</p>
                     <p className='ball'>Figma</p>
                 </section>
