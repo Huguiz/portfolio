@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <footer>
             <article className={s.article}>
-                <p>hmaurin.com</p>
+                <p>hmaurin.fr</p>
                 <p>2024</p>
             </article>
         </footer>
