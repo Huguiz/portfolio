@@ -82,7 +82,7 @@ export default function Welcome({ language }) {
                             <p>
                                 {
                                     language === "fr"
-                                        ? "Ancien technicien en réseau et télécom et passioné depuis toujours par le monde du code, j'ai décidé de me réorienter en tant que développeur front-end."
+                                        ? "Ancien technicien en réseau et télécom et passionné depuis toujours par le monde du code, j'ai décidé de me réorienter en tant que développeur front-end."
                                         : "A former network and telecoms technician with a lifelong passion for the world of code, I decided to change direction and become a front-end developer."
                                 }
                             </p>
