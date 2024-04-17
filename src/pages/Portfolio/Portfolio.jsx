@@ -193,7 +193,7 @@ export default function Portfolio({ language }) {
                 </section>
                 <section className={s.project}>
                     <div className={s.project_img}>
-                        <a href="fermesaintjean.fr" target="_blank" rel="noopener noreferrer"><img src={fermeSaintJeanPicture} alt="Ferme Saint Jean Picture" /></a>
+                        <a href="https://fermesaintjean.fr" target="_blank" rel="noopener noreferrer"><img src={fermeSaintJeanPicture} alt="Ferme Saint Jean Picture" /></a>
                     </div>
                     <div className={s.project_text}>
                         <div>

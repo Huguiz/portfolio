@@ -151,6 +151,7 @@
     max-width: 100%;
     border-radius: 1rem;
     border: 2px solid var(--thirdTxtColor);
+    transition: 0.3s;
 }
 
 .hobbies img:hover {
